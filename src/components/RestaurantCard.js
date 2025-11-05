@@ -1,6 +1,6 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants"; 
-import   {LOGO_URL}  from "../utils/constants"// optional if you have a separate CDN_URL constant
+
 
 const RestaurantCard = ({ resData }) => {
   const {
