@@ -9,9 +9,9 @@ const RestaurantCard = ({ resData }) => {
     cuisines,
     avgRating,
     costForTwo,
-    deliveryTime,
+    sla,
     cloudinaryImageId,
-  } = resData?.data || {};
+  } = resData?.info || {};
 
   return (
     <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
@@ -24,7 +24,7 @@ const RestaurantCard = ({ resData }) => {
       <h4>{cuisines?.join(", ")}</h4> {/* ✅ Added optional chaining */}
       <h4>{avgRating} ⭐</h4>
       <h4>{costForTwo}</h4>
-      <h4>{deliveryTime} minutes</h4>
+      <h4>{sla?.deliveryTime} minutes</h4>
     </div>
   );
 };
