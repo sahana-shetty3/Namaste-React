@@ -4,10 +4,10 @@ import Shimmer  from "./Shimmer";
 
 const Body = () => {
   // state variable to store restaurant data
-  const [listOfRestaurants, setListOfRestaurants] = useState("");
-  const[filteredRestaurant,setFilteredRestaurant]=useState("");
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const[filteredRestaurant,setFilteredRestaurant]=useState([]);
 
-  const [searchText,setSearchText]=useState([]);
+  const [searchText,setSearchText]=useState("");
 
   // fetch data when component loads
   useEffect(() => {
@@ -55,14 +55,15 @@ const Body = () => {
            
            }}
            />
-          <button 
+          <button
           onClick={()=>
             {
               console.log(searchText);
-             const filteredRestaurant = listOfRestaurants.filter((res)=>
+             const filteredRestaurant = listOfRestaurants.filter(
+              (res)=>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
-            setListOfRestaurants(filteredRestaurant);
+            setFilteredRestaurant(filteredRestaurant);
            } }
            >
             Search
