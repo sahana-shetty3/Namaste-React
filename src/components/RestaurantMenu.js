@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import Shimmer from "./Shimmer";
 
+
 const RestaurantMenu = ()=>{
 
     onst [resInfo,setResInfo]=useState(null);
 
     useEffect(()=>{
-        fetchMenu();
+        fetchMenu()
 
     },[])
     const fetchMenu = async ()=>{
