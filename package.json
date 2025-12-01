@@ -5,6 +5,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
+    "server": "node server.js",
     "test": "jest"
   },
   "keywords": [
@@ -16,11 +17,22 @@
     "parcel": "^2.16.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^6.30.2"
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahana-shetty3/Namaste-React.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sahana-shetty3/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/sahana-shetty3/Namaste-React#readme"
 }

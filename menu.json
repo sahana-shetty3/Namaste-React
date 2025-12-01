@@ -1,0 +1,83 @@
+{
+  "cards": [
+    {
+      "card": {
+        "card": {
+          "info": {
+            "id": "581367",
+            "name": "Biriyani House",
+            "cuisines": ["Biryani", "North Indian", "Chinese"],
+            "costForTwoMessage": "₹300 for two"
+          }
+        }
+      }
+    },
+
+    {},
+    {
+      "groupedCard": {
+        "cardGroupMap": {
+          "REGULAR": {
+            "cards": [
+              {},
+              {
+                "card": {
+                  "card": {
+                    "title": "Biriyanis",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "info": {
+                            "id": "101",
+                            "name": "Chicken Biryani",
+                            "price": 20000
+                          }
+                        }
+                      },
+                      {
+                        "card": {
+                          "info": {
+                            "id": "102",
+                            "name": "Mutton Biryani",
+                            "price": 25000
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "title": "Starters",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "info": {
+                            "id": "201",
+                            "name": "Chicken Kabab",
+                            "defaultPrice": 18000
+                          }
+                        }
+                      },
+                      {
+                        "card": {
+                          "info": {
+                            "id": "202",
+                            "name": "Paneer Tikka",
+                            "defaultPrice": 16000
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
