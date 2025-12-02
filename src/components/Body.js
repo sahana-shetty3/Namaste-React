@@ -10,21 +10,20 @@ const Body = () => {
 
   const [searchText,setSearchText]=useState("");
 
-  // fetch data when component loads
   useEffect(() => {
     fetchData();
   }, []);
 
-  // async function to fetch real data from Swiggy API
+
   const fetchData = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9536392&lng=77.695126&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
-    console.log(); // Check structure in console
+    console.log(); 
 
-    // ✅ Extract restaurant list correctly
+    
     const restaurantList =
       json?.data?.cards?.find(
         (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -39,10 +38,6 @@ const Body = () => {
 
     setFilteredRestaurant(restaurantList2);
   };
-
-  
-
-  
 
   return  listOfRestaurants.length ===0 ?(
     <Shimmer/>
