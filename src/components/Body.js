@@ -63,7 +63,7 @@ const Body = () => {
            } }
            >
             Search
-            </button>
+            </button>__
         </div>
         <button
           className="filter-btn"
