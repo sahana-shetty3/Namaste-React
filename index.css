@@ -20,12 +20,12 @@
   padding: 10px;
   margin: 10px;
 }
-.res-container{
+.RestaurantContainer{
   display: flex;
   flex-wrap: wrap;
 }
 .res-card{
-  
+ 
   margin: 20px;
   padding: 10px;
   width: 250px;
