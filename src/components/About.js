@@ -1,3 +1,5 @@
+import User from "../User";
+
 const About=()=>{
     return (
         <div>
