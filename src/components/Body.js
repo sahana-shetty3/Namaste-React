@@ -29,7 +29,7 @@ const Body= () =>{
 
   if(onlineSatus=== false) 
     return(
-    <h1>you are offline </h1>
+    <h1>looks like you are offline </h1>
   );
 
   

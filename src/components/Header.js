@@ -18,7 +18,7 @@ const Header = () =>{
             </div>
             <div className ="nav-items">
                 <ul>
-                    <li>Online status:{onlineSatus}"✅":"❌"</li>
+                    <li>Online status:{onlineSatus ? "✅":"❌"}</li>
                     <li>
                        <Link to="/">Home</Link>
                     </li>
@@ -28,7 +28,9 @@ const Header = () =>{
                     <li>
                        <Link to="/contact">Contact</Link>
                     </li>
-                    <li>Cart</li>
+                    <li>
+                       <Link to="/grocery">Grocery</Link>
+                    </li>
 
                     <button className="login" 
                     onClick={()=>{
