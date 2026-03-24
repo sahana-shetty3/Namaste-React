@@ -3,13 +3,14 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
+import "../index.css";
 
 const Body= () =>{
   const [listOfRestaurant,setListOfRestaurant] = useState([]);
 
   const [filteredRestaurant,setFilteredRestaurant] = useState([]);
 
-  const [searchText,setSearchText] = useState([]);
+  const [searchText,setSearchText] = useState("");
   
   useEffect(()=>{
     fetchData();
@@ -39,18 +40,19 @@ const Body= () =>{
   ) :(
     <div className="container-body">
       <div className="filter-btn">
-        <div className="search">
+        <h1 className="text-red-500 text-3xl">TEST</h1>
+        <div className="search m-4 p-4">
           <input type="text"
-          className="search-box"
+          className="search-box border-solid border-black"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}/>
           <button
-          className="searchBtn"
+          className="searchBtn px-4 py-2 bg-green-500 m-4"
           onClick={() =>{
             const filteredRestaurant = listOfRestaurant.filter((res) =>{
-              return res.info.name.toLowerCase()
+              return  res.info.name.toLowerCase()
               .includes(searchText.toLowerCase());
             });
             setFilteredRestaurant(filteredRestaurant);
