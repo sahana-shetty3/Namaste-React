@@ -1,9 +1,9 @@
 import {useState,useEffect} from "react";
-import RestaurantCard from "./RestaurantCard";
-import Shimmer from "./Shimmer";
+import RestaurantCard from "./RestaurantCard.jsx";
+import Shimmer from "./Shimmer.jsx";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "./useOnlineStatus";
-import "../index.css";
+import useOnlineStatus from "./useOnlineStatus.jsx";
+
 
 const Body= () =>{
   const [listOfRestaurant,setListOfRestaurant] = useState([]);

@@ -1,8 +1,8 @@
-import { LOGO_URL } from "../utils/constants";
+import { LOGO_URL } from "../utils/constants.jsx";
 import {useState} from "react";
 import { Link } from "react-router-dom";
-import useOnlineStatus from "./useOnlineStatus";
-import "../index.css";
+import useOnlineStatus from "./useOnlineStatus.jsx";
+
 
 const Header = () =>{
     
