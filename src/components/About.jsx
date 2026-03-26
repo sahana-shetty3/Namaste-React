@@ -1,5 +1,5 @@
 
-import UserClass from "src/UserClass.jsx";
+import UserClass from "../UserClass";
 import React from "react";
 
 class About extends React.Component{

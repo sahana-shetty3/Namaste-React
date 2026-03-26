@@ -39,6 +39,7 @@ const Body= () =>{
 
   ) :(
     <div className="container-body">
+      <h1 className="text-red-500 text-5xl">TAILWIND WORKING 🚀</h1>
       <div className="filter-btn">
         <h1 className="text-red-500 text-3xl">TEST</h1>
         <div className="search m-4 p-4">
