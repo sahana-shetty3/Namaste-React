@@ -44,13 +44,13 @@ const Body= () =>{
         <h1 className="text-red-500 text-3xl">TEST</h1>
         <div className="search m-4 p-4">
           <input type="text"
-          className="search-box border-solid border-black"
+          className="search-box border-solid border-red-500 rounded-lg"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}/>
           <button
-          className="searchBtn px-4 py-2 bg-green-500 m-4"
+          className="searchBtn px-4 py-2 bg-green-500 m-4 rounded-lg"
           onClick={() =>{
             const filteredRestaurant = listOfRestaurant.filter((res) =>{
               return  res.info.name.toLowerCase()
@@ -63,6 +63,7 @@ const Body= () =>{
           </button>
         </div>
         <button 
+        className=" px-4 py-2 bg-gray-100"
         onClick={
           () => {
             const filterLogic = listOfRestaurant.filter((res) =>{
@@ -75,7 +76,7 @@ const Body= () =>{
           Top Restaurant
         </button>
       </div>
-      <div className="RestaurantContainer">
+      <div className="flex-wrap">
         {
           filteredRestaurant.map((restaurant) =>(
             <Link key={restaurant.info.id}
