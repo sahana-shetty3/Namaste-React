@@ -1,5 +1,5 @@
 import {useState,useEffect} from "react";
-import RestaurantCard from "./RestaurantCard.jsx";
+import RestaurantCard ,{withPromotedLabel}from "./RestaurantCard.jsx";
 import Shimmer from "./Shimmer.jsx";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus.jsx";
@@ -11,6 +11,8 @@ const Body= () =>{
   const [filteredRestaurant,setFilteredRestaurant] = useState([]);
 
   const [searchText,setSearchText] = useState("");
+  
+  const   RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   
   useEffect(()=>{
     fetchData();
@@ -39,9 +41,9 @@ const Body= () =>{
 
   ) :(
     <div className="container-body">
-      <h1 className="text-red-500 text-5xl">TAILWIND WORKING 🚀</h1>
+      
       <div className="filter-btn">
-        <h1 className="text-red-500 text-3xl">TEST</h1>
+        
         <div className="search m-4 p-4">
           <input type="text"
           className="search-box border-solid border-red-500 rounded-lg"
@@ -76,12 +78,16 @@ const Body= () =>{
           Top Restaurant
         </button>
       </div>
-      <div className="flex-wrap">
+      <div className=" flex flex-wrap">
         {
           filteredRestaurant.map((restaurant) =>(
             <Link key={restaurant.info.id}
             to={"/restaurants/"+restaurant.info.id}>
-            <RestaurantCard resData={restaurant}/>
+              {/**if the restaurant is promoted then add a promoted label to it */
+              restaurant.info.promoted ? <RestaurantCardPromoted resData={restaurant}/>
+              :<RestaurantCard resData={restaurant}/>
+              }
+            
             </Link>
           ))
         }
